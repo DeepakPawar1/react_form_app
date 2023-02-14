@@ -1,6 +1,7 @@
-function BookEdit () {
+function BookEdit ({showEdit}) {
 
-	return <div> BookCreate </div>
+
+	return <div> BookEdit </div>
 }
 
 export default BookEdit;

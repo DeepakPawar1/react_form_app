@@ -17,7 +17,7 @@ setinpvalue('');
 		console.log(event.target.value);
 		setinpvalue(event.target.value);
 	}
-		return (<form onSubmit={handleSubmit}> <input value={inpvalue} onChange={handleChange}/> <button>Create!</button></form>)
+		return (<div className="book-create"><h3>Add a book</h3><form onSubmit={handleSubmit}> <input className="input" value={inpvalue} onChange={handleChange}/> <button className="button">Create!</button></form></div>)
 }
 
 export default BookCreate;
