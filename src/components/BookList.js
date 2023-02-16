@@ -1,16 +1,16 @@
 
-
+import {useContext} from 'react';
 import BookShow from './BookShow';
+import BooksContext from '../contexts/Books';
 
-function BookList ({booklist, onDelete,onEdit}) {
-console.log(booklist,"in booklist")
-
-const render_template= booklist.map((elem,index) => {
+function BookList () {
+	const {books} = useContext(BooksContext);
+const render_template= books.map((book) => {
 	
-return <BookShow key={elem.id} element={elem} onDelete={onDelete} onEdit={onEdit}/>
+return <BookShow key={books.id} book={book} />
 });
 
-	return (<div className="book-list"> {render_template } </div>)
+return (<div className="book-list">{render_template } </div>)
 
 }
 
